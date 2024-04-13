@@ -1,10 +1,4 @@
-export interface UserFormView {
-    name: string,
-    imageUrl: string,
-    description: string,
-}
-
-export default function UserFormView(props: UserFormView) {
+export default function UserFormView() {
     return (
         <div className="UserFormView" />
     );
