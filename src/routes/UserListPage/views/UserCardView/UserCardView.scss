@@ -1,0 +1,91 @@
+@use '../../../../style/colors';
+@use '../../../../style/typography' as text;
+
+.UserCardView {
+    background-color: colors.$additional-6-color;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 360px;
+    height: 168px;
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 32px;
+    border: none;
+    text-align: left;
+
+    &__image {
+        width: 112px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+    }
+
+    &__name {
+        padding-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            @include text.headline();
+            color: colors.$accent-color;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    &__company {
+        margin-bottom: 42px;
+        padding-bottom: 6px;
+        @include text.text2-medium();
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__city {
+        color: colors.$additional-3-color;
+        @include text.caption();
+    }
+}
+
+.UserCardView::after {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.UserCardView:hover::after {
+  opacity: 1;
+}
+
+.Archived {
+    &__name {
+        padding-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            @include text.headline();
+            color: colors.$additional-2-color;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &__image {
+        width: 112px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+        filter: grayscale(100%);
+    }
+}

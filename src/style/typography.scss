@@ -1,0 +1,61 @@
+$font-size-24: 1.5rem;
+$font-size-20: 1.25rem;
+$font-size-18: 1.125rem;
+$font-size-16: 1rem;
+$font-size-14: 0.875rem;
+
+$font-weight-200: 200;
+$font-weight-300: 300; 
+$font-weight-400: 400; 
+$font-weight-500: 500; 
+$font-weight-600: 600; 
+$font-weight-700: 700; 
+$font-weight-800: 800;  
+
+$line-height-32: 2.0625rem;
+$line-height-27: 1.6875rem;
+$line-height-25: 1.5625rem;
+$line-height-22: 1.375rem;
+$line-height-19: 1.1875rem;
+
+@mixin title() {
+    font-size: $font-size-24;
+    line-height: $line-height-32;
+    font-weight: $font-weight-600;
+}
+
+@mixin headline() {
+    font-size: $font-size-20;
+    line-height: $line-height-27;
+    font-weight: $font-weight-600;
+}
+
+@mixin text1-semibold() {
+    font-size: $font-size-18;
+    line-height: $line-height-25;
+    font-weight: $font-weight-600;
+}
+
+@mixin text1-medium() {
+    font-size: $font-size-18;
+    line-height: $line-height-25;
+    font-weight: $font-weight-600;
+}
+
+@mixin text2-semibold() {
+    font-size: $font-size-16;
+    line-height: $line-height-22;
+    font-weight: $font-weight-600;
+}
+
+@mixin text2-medium() {
+    font-size: $font-size-16;
+    line-height: $line-height-22;
+    font-weight: $font-weight-500;
+}
+
+@mixin caption() {
+    font-size: $font-size-14;
+    line-height: $line-height-19;
+    font-weight: $font-weight-500;
+}

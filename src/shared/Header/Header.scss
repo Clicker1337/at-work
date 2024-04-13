@@ -1,0 +1,35 @@
+@use '../../style/colors';
+
+.Header {
+    background-color: colors.$additional-6-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 10px 16px 10px;
+
+    &__wrapper {
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 24px;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    &__profile-pic {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0px 8px 0px 20px;
+    }
+}

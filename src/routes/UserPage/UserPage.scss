@@ -1,0 +1,94 @@
+@use '../../style/colors.scss';
+@use '../../style/typography.scss' as text;
+
+.UserPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+        width: 1160px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        border: none;
+        margin: 20px 0px 44px 0px;
+        @include text.headline();
+        color: colors.$additional-2-color;
+        stroke: colors.$additional-2-color;
+    }
+
+    &__nav:hover {
+        color: colors.$accent-color;
+        stroke: colors.$accent-color;
+    }
+}
+
+.Profile {
+    display: flex;
+
+    &__image {
+        width: 280px;
+        height: 485px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 40px;
+    }
+
+    &__wrapper {
+        width: 360px;
+        height: 813px;
+        padding: 40px;
+        background-color: colors.$additional-6-color;
+        border-radius: 16px;
+        box-sizing: border-box;
+        margin: 0px 40px 100px 0px;
+        gap: 36px;
+    }
+
+    &__settings {
+        width: 100%;
+        border-bottom: 1px solid rgb(218, 218, 218);
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+    }
+    &__settings:nth-child(n + 2) {
+        color: colors.$additional-3-color;
+    }
+
+    &__data {
+        width: 760px;
+        height: 813px;
+        background-color: colors.$additional-6-color;
+        border-radius: 16px;
+        box-sizing: border-box;
+        padding: 40px;
+    }
+
+    &__label {
+        @include text.title();
+        border-bottom: 1px solid rgb(218, 218, 218);
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        border: none;
+        width: 170px;
+        height: 46px;
+        border-radius: 50px;
+        margin-top: 8px;
+        background-color: colors.$additional-1-color;
+        color: colors.$additional-6-color;
+        @include text.text2-semibold;
+        transition: background-color 250ms ease-in-out;
+        cursor: pointer;
+    }
+    &__button:hover {
+        background-color: colors.$additional-5-color;
+        color: colors.$additional-2-color;
+    }
+}
