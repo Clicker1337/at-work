@@ -1,4 +1,3 @@
-import React from 'react';
 import classNames from 'classnames';
 import Logo from '../../icons/logo.svg?react';
 import Like from '../../icons/Solid_Interface_Favorite.svg?react';
